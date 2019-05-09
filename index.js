@@ -13,17 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault()
+    const username = document.getElementById('name-input').value
+    const jokeList = document.getElementById('joke-list')
+    const newJokeLi = document.createElement('li')
+
+    if(username === "") return;
 
     fetchJoke().then(joke => {
 
-      const username = document.getElementById('name-input').value
-      const jokeList = document.getElementById('joke-list')
-      const newJokeLi = document.createElement('li')
-
       newJokeLi.innerHTML = `
-      ${username} says: ${joke}
+      <span class="username">${username} says:</span> ${joke}
       `
-      
+
       jokeList.appendChild(newJokeLi)
     })
   })
