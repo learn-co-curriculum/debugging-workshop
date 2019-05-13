@@ -4,4 +4,4 @@ This app is a simple joke generator. You put your name in and it will automatica
 
 The below gif demonstrates the intended functionality of this app:
 
-![debugging workshop](./debugging-workshop.gif "Debugging Workshop gif")
+![debugging workshop](./debuggingworkshop.gif "Debugging Workshop gif")
