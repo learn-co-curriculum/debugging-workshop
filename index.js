@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchJoke()
 
   function fetchJoke(){
-    return fetch('https://icanhazdadjoke.com/', {
+    fetch('https://icanhazdadjoke.com/', {
       headers: {
         "Accept": "application/json"
       }
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(jokeData => {
       joke = jokeData.joke
-      return joke
     })
   }
 
